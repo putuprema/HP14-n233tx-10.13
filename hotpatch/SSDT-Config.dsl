@@ -88,7 +88,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         //
         // Ones: Default will be used (0x710 for Ivy/Sandy, 0xad9 for Haswell/Broadwell)
         // Other values: must match framebuffer
-        Name(LMAX, Ones)
+        Name(LMAX, 0xad9)
 
         // FBTP: Framebuffer type. Determines IGPU PWM register layout.
         //  (advanced use: for overriding default for unsupported IGPU device-id)
@@ -96,7 +96,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // 0: Default based on device-id
         // 1: Ivy/Sandy
         // 2: Haswell/Broadwell/Skylake/KabyLake
-        Name(FBTP, 0)
+        Name(FBTP, 2)
     }
 }
 //EOF
